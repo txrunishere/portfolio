@@ -36,7 +36,7 @@ export const ContactForm = () => {
     setIsLoading(true);
     try {
       const response = await axios.post(
-        "https://portfolio-contact-backend.vercel.app/",
+        "https://portfolio-contact-backend.vercel.app/contact",
         {
           email: contact.email,
           name: contact.name,
