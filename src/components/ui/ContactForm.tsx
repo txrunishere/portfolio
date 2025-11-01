@@ -6,6 +6,7 @@ import { Textarea } from "./textarea";
 import { useState, type ChangeEvent, type FormEvent } from "react";
 import axios, { AxiosError } from "axios";
 import { toast } from "sonner";
+import { Loader } from "lucide-react";
 
 export const ContactForm = () => {
   const [contact, setContact] = useState<{
@@ -18,6 +19,7 @@ export const ContactForm = () => {
     message: "",
   });
   const [error, setError] = useState<string>("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleNameChange = (e: ChangeEvent<HTMLInputElement>) =>
     setContact({ ...contact, name: e.target.value });
@@ -30,9 +32,11 @@ export const ContactForm = () => {
 
   const handleSendEmail = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setError("");
+    setIsLoading(true);
     try {
       const response = await axios.post(
-        "http://localhost:8080/contact",
+        "https://portfolio-contact-backend.vercel.app/",
         {
           email: contact.email,
           name: contact.name,
@@ -45,11 +49,15 @@ export const ContactForm = () => {
         },
       );
 
-      if (response.data.success) toast.success(response.data.message);
+      if (!response.data.success) toast.error(response.data.error);
+      else toast.success("Message send successfully!!");
     } catch (error) {
       const e = error as AxiosError<{ success: boolean; message: string }>;
+      console.log({ error });
       if (e.response?.data) setError(e.response.data.message);
       else setError("Something went wrong while send message!!");
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -100,6 +108,7 @@ export const ContactForm = () => {
               )}
               <div>
                 <Button type="submit" variant={"default"} className="w-full">
+                  {isLoading && <Loader className="animate-spin" />}
                   Send Message
                 </Button>
               </div>

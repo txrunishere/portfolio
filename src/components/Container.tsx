@@ -1,7 +1,7 @@
 import { TooltipProvider } from "@radix-ui/react-tooltip";
 import { Navbar } from "./Navbar";
 import { cn } from "@/lib/utils";
-import { Toaster } from "sonner";
+import { toast, Toaster } from "sonner";
 
 export const Container = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -11,7 +11,7 @@ export const Container = ({ children }: { children: React.ReactNode }) => {
       )}
     >
       <TooltipProvider>
-        <Toaster />
+        <Toaster position="top-center" closeButton={true} />
         <div className="space-y-8">{children}</div>
         <Navbar />
       </TooltipProvider>
