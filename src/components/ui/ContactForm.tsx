@@ -30,19 +30,27 @@ export const ContactForm = () => {
 
   const handleSendEmail = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    await axios.post(
-      "http://localhost:8080/contact",
-      {
-        email: contact.email,
-        name: contact.name,
-        message: contact.message,
-      },
-      {
-        headers: {
-          "Content-Type": "application/json",
+    try {
+      const response = await axios.post(
+        "http://localhost:8080/contact",
+        {
+          email: contact.email,
+          name: contact.name,
+          message: contact.message,
         },
-      },
-    );
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        },
+      );
+
+      if (response.data.success) toast.success(response.data.message);
+    } catch (error) {
+      const e = error as AxiosError<{ success: boolean; message: string }>;
+      if (e.response?.data) setError(e.response.data.message);
+      else setError("Something went wrong while send message!!");
+    }
   };
 
   return (
