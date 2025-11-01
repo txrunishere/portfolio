@@ -1,11 +1,4 @@
-import {
-  HomeIcon,
-  Github,
-  Twitter,
-  Mail,
-  Linkedin,
-  DropletIcon,
-} from "lucide-react";
+import { HomeIcon, Github, Twitter, Mail, Linkedin } from "lucide-react";
 import { Dock, DockIcon } from "./ui/dock";
 import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
 import { buttonVariants } from "./ui/button";
@@ -18,11 +11,15 @@ export const Navbar = () => {
     navbar: [{ href: "/", icon: HomeIcon, label: "Home" }],
     social: [
       { name: "GitHub", url: "https://github.com/txrunishere", icon: Github },
-      { name: "LinkedIn", url: "#", icon: Linkedin },
+      {
+        name: "LinkedIn",
+        url: "https://www.linkedin.com/in/tarun-soni-246213390/",
+        icon: Linkedin,
+      },
       { name: "X", url: "https://x.com/devtarunhere", icon: Twitter },
       {
         name: "Email",
-        url: "https://mail.google.com/mail/u/0/#sent?compose=jrjtXSnhQKtvZRrZjcvfDLNwwFmZFtNnWPVgFqdWjMCzcvMBTflgpvkgPRKHWGpVPkzMszMT",
+        url: "mailto:tson9286@gmail.com",
         icon: Mail,
       },
     ],
@@ -30,7 +27,7 @@ export const Navbar = () => {
 
   return (
     <div className="fixed inset-x-0 bottom-0 mb-4">
-      <Dock direction="middle">
+      <Dock className="rounded-4xl" direction="middle">
         {DATA.navbar.map((item) => (
           <DockIcon key={item.label}>
             <Tooltip>
