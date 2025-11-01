@@ -17,7 +17,8 @@ export const Projects = () => {
   const projectsData: ProjectType[] = [
     {
       projectName: "Gupt Chat",
-      image: "./src/assets/gupt-chat.png",
+      image:
+        "https://res.cloudinary.com/dpp16pzli/image/upload/v1762017000/gupt-chat_t3vmmh.png",
       projectDescription:
         "Features private room chats, instant messaging, and a clean, responsive design for both mobile and desktop users.",
       source: [
@@ -33,7 +34,8 @@ export const Projects = () => {
       projectName: "Anonymous Review",
       projectDescription:
         "A platform for anonymous peer feedback and open review, enabling users to submit and receive honest commentary without revealing their identities.",
-      image: "./src/assets/anonymous-review.png",
+      image:
+        "https://res.cloudinary.com/dpp16pzli/image/upload/v1762017000/anonymous-review_bqroms.png",
       stack: [
         "Next.js",
         "Typescript",
@@ -76,7 +78,8 @@ export const Projects = () => {
       projectName: "Shopcom",
       projectDescription:
         "ShopCom is a full-stack e-commerce web application. It features user authentication, product management, cart functionality, and order processing",
-      image: "./src/assets/shopcom.png",
+      image:
+        "https://res.cloudinary.com/dpp16pzli/image/upload/v1762017001/shopcom_lsiguk.png",
       source: [
         {
           name: "Github",

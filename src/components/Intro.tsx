@@ -19,7 +19,10 @@ export const Intro = () => {
               </p>
             </div>
             <Avatar className="size-28 md:size-32">
-              <AvatarImage alt="avatar-image" src="./src/assets/me.jpeg" />
+              <AvatarImage
+                alt="avatar-image"
+                src="https://res.cloudinary.com/dpp16pzli/image/upload/v1762017001/me_fzritj.jpg"
+              />
               <AvatarFallback>AI</AvatarFallback>
             </Avatar>
           </div>
