@@ -1,7 +1,7 @@
 import { TooltipProvider } from "@radix-ui/react-tooltip";
 import { Navbar } from "./Navbar";
 import { cn } from "@/lib/utils";
-import { toast, Toaster } from "sonner";
+import { Toaster } from "sonner";
 
 export const Container = ({ children }: { children: React.ReactNode }) => {
   return (
