@@ -54,39 +54,43 @@ export const LeaveANote = () => {
     <div className="space-y-5">
       <h2 className="text-2xl font-bold">Notes Wall</h2>
       <section className="flex flex-col gap-4 md:flex-row">
-        <div
-          ref={wallRef}
-          className="relative h-[400px] w-full overflow-hidden rounded-xl border bg-white transition-colors duration-300 md:flex-1 dark:bg-neutral-900"
-        >
-          <div className="flex flex-wrap p-4">
-            {notes.length === 0 ? (
-              <p className="mt-4 text-center text-sm text-gray-500">
-                No notes yet. Add one below!
-              </p>
-            ) : (
-              notes.map((note) => {
-                return (
-                  <motion.div
-                    key={note._id}
-                    drag
-                    dragConstraints={wallRef}
-                    dragMomentum={false}
-                    className={`${getColor(
-                      note._id,
-                    )} absolute cursor-grab rounded-lg border border-black/10 p-3 shadow-md active:cursor-grabbing`}
-                  >
-                    <p className="text-sm font-medium wrap-break-word text-gray-800">
-                      {note.noteText}
-                    </p>
-                  </motion.div>
-                );
-              })
-            )}
+        <div className="w-full">
+          <div
+            ref={wallRef}
+            className="relative h-[400px] w-full overflow-hidden rounded-xl border bg-white transition-colors duration-300 md:flex-1 dark:bg-neutral-900"
+          >
+            <div className="flex flex-wrap p-4">
+              {notes.length === 0 ? (
+                <p className="mt-4 text-center text-sm text-gray-500">
+                  No notes yet. Add one below!
+                </p>
+              ) : (
+                notes.map((note) => {
+                  return (
+                    <motion.div
+                      key={note._id}
+                      drag
+                      dragConstraints={wallRef}
+                      dragMomentum={false}
+                      className={`${getColor(
+                        note._id,
+                      )} absolute cursor-grab rounded-lg border border-black/10 p-3 shadow-md active:cursor-grabbing`}
+                    >
+                      <p className="text-sm font-medium wrap-break-word text-gray-800">
+                        {note.noteText}
+                      </p>
+                    </motion.div>
+                  );
+                })
+              )}
+            </div>
           </div>
+          {addNote.error && (
+            <p className="mt-3 text-[10px] leading-0 text-red-500">
+              {addNote.error.message}
+            </p>
+          )}
         </div>
-        {addNote.error && (
-          <p className="text-[10px] leading-0">{addNote.error.message}</p>
-        )}
         <div className="space-y-2 md:w-80">
           <form onSubmit={handleSubmit} className="flex gap-2">
             <Input
