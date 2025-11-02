@@ -2,6 +2,9 @@ import { TooltipProvider } from "@radix-ui/react-tooltip";
 import { Navbar } from "./Navbar";
 import { cn } from "@/lib/utils";
 import { Toaster } from "sonner";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
+const queryClient = new QueryClient();
 
 export const Container = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -12,7 +15,9 @@ export const Container = ({ children }: { children: React.ReactNode }) => {
     >
       <TooltipProvider>
         <Toaster position="top-center" closeButton={true} />
-        <div className="space-y-8">{children}</div>
+        <QueryClientProvider client={queryClient}>
+          <div className="space-y-8">{children}</div>
+        </QueryClientProvider>
         <Navbar />
       </TooltipProvider>
     </div>

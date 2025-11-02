@@ -1,11 +1,11 @@
 import {
-  Contact,
   Container,
   Education,
   GithubCalendar,
   Intro,
   Projects,
   Skills,
+  LeaveANote,
 } from "./components";
 import { BlurFade } from "./components/ui/blur-fade";
 
@@ -28,7 +28,7 @@ export const App = () => {
         <Projects />
       </BlurFade>
       <BlurFade delay={0.3} duration={0.5}>
-        <Contact />
+        <LeaveANote />
       </BlurFade>
     </Container>
   );
