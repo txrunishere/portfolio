@@ -4,8 +4,8 @@ import { Button } from "./ui/button";
 
 export const Intro = () => {
   const handleOpenResume = () => {
-    console.log(window.location);
-    window.open(`${import.meta.env.VITE_FRONTEND_URL}/cv.pdf`, "_blank");
+    console.log(window.location.origin);
+    window.open(`${window.location.origin}/cv.pdf`, "_blank");
   };
 
   return (
