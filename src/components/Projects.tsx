@@ -107,7 +107,8 @@ export const Projects = () => {
       projectName: "Ai Code Generator",
       image:
         "https://res.cloudinary.com/dpp16pzli/image/upload/v1762524478/daba0af2-587e-49f2-bf07-de04de92a7fc.png",
-      projectDescription: "",
+      projectDescription:
+        "An AI-powered web app that generates complete, responsive websites from user inputs. It helps users instantly create and customize modern designs without any coding.",
       source: [
         {
           name: "Website",
