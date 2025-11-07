@@ -123,6 +123,21 @@ export const Projects = () => {
       ],
       stack: ["React", "Express", "Shadcn", "TailwindCSS", "Gemini API"],
     },
+    {
+      projectName: "Job Portal",
+      image:
+        "https://res.cloudinary.com/dpp16pzli/image/upload/v1762533741/919cec3d-9e22-4df6-9a13-78db4fb196ec.png",
+      projectDescription:
+        "A job search platform built with React and Vite, featuring dynamic listings, advanced filtering, and a responsive UI for seamless job browsing and applications.",
+      source: [
+        {
+          href: "https://github.com/txrunishere/job-portal-react/",
+          icon: githubIcon,
+          name: "Github",
+        },
+      ],
+      stack: ["React", "json-server", "React Router", "TailwindCSS"],
+    },
   ];
 
   return (
