@@ -104,19 +104,31 @@ export const Projects = () => {
       ],
     },
     {
-      projectName: "Job Portal",
+      projectName: "Job Khojo",
       image:
-        "https://res.cloudinary.com/dpp16pzli/image/upload/v1762533741/919cec3d-9e22-4df6-9a13-78db4fb196ec.png",
+        "https://res.cloudinary.com/dpp16pzli/image/upload/v1764594472/186fa7c0-855a-41d6-b6ec-9e3fb9c26433.png",
       projectDescription:
-        "A job search platform built with React and Vite, featuring dynamic listings, advanced filtering, and a responsive UI for seamless job browsing and applications.",
+        "A full-stack web application that connects job seekers with employers: employers can post job vacancies and seekers can search and apply.",
       source: [
         {
-          href: "https://github.com/txrunishere/job-portal-react/",
+          href: "https://github.com/txrunishere/job-khojo/",
           icon: githubIcon,
           name: "Github",
         },
       ],
-      stack: ["React", "json-server", "React Router", "TailwindCSS"],
+      stack: [
+        "React",
+        "React Router",
+        "TailwindCSS",
+        "Shadcn",
+        "Clerk",
+        "Supabase",
+        "zod",
+        "Tanstack Query",
+        "react-hook-form",
+        "Recharts",
+        "Context API",
+      ],
     },
   ];
 
