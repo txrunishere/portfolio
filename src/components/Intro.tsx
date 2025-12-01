@@ -4,8 +4,7 @@ import { Button } from "./ui/button";
 
 export const Intro = () => {
   const handleOpenResume = () => {
-    console.log(window.location.origin);
-    window.open(`${window.location.origin}/cv.pdf`, "_blank");
+    window.open(`${window.location.origin}/resume.pdf`, "_blank");
   };
 
   return (
@@ -35,7 +34,9 @@ export const Intro = () => {
             </div>
           </div>
           <div>
-            <Button onClick={handleOpenResume}>RESUME</Button>
+            <Button size={"sm"} variant={"outline"} onClick={handleOpenResume}>
+              RESUME
+            </Button>
           </div>
         </div>
         <div>
