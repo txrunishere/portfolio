@@ -4,13 +4,6 @@ export const Education = () => {
   const DATA = [
     {
       image:
-        "https://res.cloudinary.com/dpp16pzli/image/upload/v1762017000/school-img_t99hml.jpg",
-      name: "V.M. Public Sr. Sec. School",
-      qualification: "12th Standard",
-      yearString: "2020 - 2023",
-    },
-    {
-      image:
         "https://res.cloudinary.com/dpp16pzli/image/upload/v1762017000/college-img_jvap1n.jpg",
       name: "Baby Happy Modern P.G. College",
       qualification: "BCA (Bachelor in Computer Applications)",

@@ -79,28 +79,25 @@ export const Projects = () => {
       ],
     },
     {
-      projectName: "Shopcom",
+      projectName: "POV",
       projectDescription:
-        "ShopCom is a full-stack e-commerce web application. It features user authentication, product management, cart functionality, and order processing",
+        "A modern social media app that lets users create posts and engage by liking and saving content.",
       image:
-        "https://res.cloudinary.com/dpp16pzli/image/upload/v1762017001/shopcom_lsiguk.png",
+        "https://res.cloudinary.com/dpp16pzli/image/upload/v1767387684/1230b67c-cebe-46c8-9c10-32e796dbc5ff.png",
       source: [
         {
           name: "Github",
-          href: "https://github.com/txrunishere/shopcom",
+          href: "https://github.com/txrunishere/POV",
           icon: githubIcon,
         },
       ],
       stack: [
-        "Express",
-        "Prisma",
-        "Postgresql",
-        "Cloudinary",
         "React",
-        "Tailwind CSS",
-        "Apex Charts",
-        "React Redux",
-        "RTK Query",
+        "shadcn",
+        "react-hook-form",
+        "zod",
+        "Appwrite",
+        "Tanstack Query",
       ],
     },
     {

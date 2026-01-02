@@ -23,6 +23,8 @@ export const Skills = () => {
     "Postman",
     "GraphQl",
     "Linux",
+    "Supabase",
+    "Docker",
   ];
 
   return (
